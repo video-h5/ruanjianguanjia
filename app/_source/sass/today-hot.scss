@@ -1,0 +1,487 @@
+@import "compass","normalize","components/scroll";
+
+@import "components/sprite";
+
+$browser-minimum-versions: ("ie": "6");
+
+body{
+	font-family: Microsoft Yahei, sans-serif;
+}
+.warp{
+	width: 737px;
+	margin: 0 auto;
+	padding: 15px 0;
+	overflow: hidden;
+}
+.top{
+	overflow: hidden;
+	_zoom: 1;
+}
+.topleft{
+	width: 510px;
+	height: 163px;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	.conList{
+		position: relative;
+		height: 163px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		list-style: none;
+		li{
+			position: absolute;
+			top: 0;
+		}
+		img{
+			display: block;
+		}
+	}
+	.subWarp{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 1000;
+		width: 510px;
+		height: 30px;
+		@at-root{
+			.bg{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				@include opacity(.4);
+			}
+			.tab{
+				position: absolute;
+				top: 11px;
+				left: 15px;
+				span{
+					@include float(left);
+					width: 8px;
+					height: 8px;
+					margin-right: 8px;
+					background: #fff;
+					cursor: pointer;
+					@include opacity(.3);
+					&.selected{
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+	.inforList{
+		width: 252px;
+	    position: absolute;
+	    right: 5px;
+	    bottom: 3px;
+	    z-index: 9999;
+	    div{
+	    	position: relative;
+	    	display: none;
+	    	overflow: hidden;
+	    }
+	    %a{
+	    	height: 24px;
+	    	line-height: 24px;
+	    	font-size: 14px;
+	    	text-decoration: none;
+	    	cursor: pointer;
+	    }
+	    .lefttext{
+	    	float: left;
+	    	width: 160px;
+    	    overflow: hidden;
+    	    text-align: right;
+    	    white-space: nowrap;
+    	    text-overflow: ellipsis;
+	    	@extend %a;
+	    	color: #fff;
+	    }
+
+	    .right{
+	    	float: right;
+	    	width: 85px;
+	    	text-align: center;
+	    	@extend %a;
+	    	@include ellipsis;
+	    	_visibility: visible;
+	    }
+	    .btn{
+	    	color: #333;
+	    	@include btn-sprite(xl8524);
+	    	&:hover{
+		    	color: #fff;
+	    		@include btn-sprite(xl8524hover);
+	    	}
+	    }
+	    .btn-error{
+	    	color: #1993fb;
+	    	@include btn-sprite(xl8524error);
+	    	&:hover{
+	    		color: #fff;
+	    		@include btn-sprite(xl8524hover);
+	    	}
+	    }
+
+	    .btn-disabled{
+	    	color: #999!important;
+	    	cursor: default;
+	    	@include btn-sprite(xl8524);
+	    }
+
+	
+	}
+}
+
+
+.topright{
+	float: right;
+	width: 206px;
+	height: 163px;
+	overflow: hidden;
+	.title-tab{
+		overflow: hidden;
+		span{
+			float: left;
+			width: percentage(1/2);
+			height: 26px;
+			line-height: 26px;
+			text-align: center;
+			font-size: 12px;
+			background: #f2f2f2;
+			color: #333;
+			cursor: pointer;
+			&.active{
+				background: #1993fb;
+				color: #fff;
+			}
+		}
+	}
+	.inner-content{
+		width: 100%;
+		margin-top: 1px;
+		td{
+			padding: 4px 0;
+			font-size: 12px;
+			line-height: 20px;
+		}
+		a.title-item{
+			display: block;
+			width: 96px;
+			text-decoration: none;
+			color: #333;
+			@include ellipsis;
+			&:hover{
+				color: #1993fb;
+			}
+			img{
+				margin-right: 10px;
+				vertical-align: middle;
+			}
+		}
+		.content-item{
+			color: #999;
+			width: 58px;
+			@include ellipsis;
+		}
+		@at-root{
+			.inner-content{
+				.btn{
+					display: inline-block;
+					width: 46px;
+					height: 20px;
+					text-align: center;
+					text-decoration: none;
+					color: #333;
+					vertical-align: top;
+					@include ellipsis;
+					@include btn-sprite(s4620);
+					_visibility: visible;
+					&:hover{
+						color: #fff;
+						@include btn-sprite(s4620hover);
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+.section{
+	overflow: hidden;
+}
+.section1{
+	margin-top: 24px;
+}
+// 小编推荐
+.Hot-recommended{
+	width: 510px;
+	float: left;
+	margin: 0;
+	dt{
+		height: 28px;
+		border-bottom: 1px solid #e8e8e8;
+		font-size: 0;
+		div{
+			display: inline-block;
+			padding: 0 16px;
+			*display: inline;
+			height: 10px;
+			margin-top: 6px;
+			border-left: 1px solid #e8e8e8;
+			font-size: 14px;
+			*zoom: 1;
+			*overflow: hidden;
+			span{
+				display: inline-block;
+				position: relative;
+				top: -6px;
+				height: 27px;
+				// margin: 0 12px;
+				color: #666;
+				cursor: pointer;
+			}
+			&.first{
+				border:none;
+				padding-left: 0;
+			}
+			&.active{
+				span{
+					border-bottom: 2px solid #1993fb;
+					color: #1993fb;
+				}
+			}
+		}
+	}
+	.items{
+		margin: 0;
+		overflow: hidden;
+		.item{
+			position: relative;
+			@include float(left);
+			width: 97px;
+			height: 48px;
+			margin: 15px 0 10px 15px;
+			padding-left: 58px;
+			.icon{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		.title-app{
+			position: relative;
+			top: -5px;
+			*top: 0;
+			width: 97px;
+			height: 22px;
+			@include ellipsis;
+			a{
+				font-size: 12px;
+				color: #333;
+				text-decoration: none;
+				&:hover{
+					color: #1993fb;
+				}
+			}
+		}
+		.box-btn{
+			a{
+				display: block;
+				width: 64px;
+				height: 22px;
+				line-height: 22px;
+				font-size: 12px;
+				text-align: center;
+				text-decoration: none;
+				@include ellipsis;
+			}
+			.btn{
+				color: #333;
+				@include btn-sprite(l6422);
+				&:hover{
+					color: #fff;
+					@include btn-sprite(l6422hover);
+				}
+			}
+			.btn-disabled{
+				color: #999;
+				cursor: default;
+				@include btn-sprite(l6422);
+			}
+			.btn-error{
+				color: #1993fb;
+				@include btn-sprite(l6422error);
+				&:hover{
+					color: #fff;
+					@include btn-sprite(l6422hover);
+				}
+			}		
+		}
+	}
+}
+// 下载排行榜
+.Download-ranking{
+	float: right;
+	width: 206px;
+	margin: 0;
+	dt{
+		height: 28px;
+		border-bottom: 1px solid #e8e8e8;
+		font-size: 16px;
+	}
+	dd{
+		height: 44px;
+		margin: 0;
+		margin-top: 12px;
+		overflow: hidden;
+		.number{
+			float: left;
+			width: 16px;
+			height: 14px;
+			margin-top: 13px;
+			margin-right: 10px;
+			line-height: 14px;
+			line-height: 15px\9;
+			text-align: center;
+			font-size: 12px;
+			color: #a4aab3;
+			background: #ebeef4;
+			&.one{
+				color: #fff;
+				background: #ec3b00;
+			}
+			&.second{
+				color: #fff;
+				background: #ec3b00;
+			}
+			&.three{
+				color: #fff;
+				background: #ffae00;
+			}
+		}
+		a{
+			float: left;
+		}
+		.linkicon{
+			margin: 6px 4px 0 0;
+		}
+		.linkfor{
+			width: 80px;
+			line-height: 44px;
+			font-size: 12px;
+			text-decoration: none;
+			color: #333;
+			@include ellipsis;
+			&:hover{
+				color: #1993fb;
+			}
+		}
+		.allbg{
+			width: 64px;
+			height: 22px;
+			margin-top: 10px;
+			line-height: 22px;
+			font-size: 12px;
+			text-align: center;
+			text-decoration: none;
+			@include ellipsis;
+		}
+		.btn{
+			color: #333;
+			@include btn-sprite(l6422);
+			&:hover{
+				color: #fff;
+				@include btn-sprite(l6422hover);
+			}
+		}
+		.btn-disabled{
+			@include btn-sprite(l6422);
+			cursor: default;
+			color: #999;
+		}
+		.btn-error{
+			color: #1993fb;
+			@include btn-sprite(l6422error);
+			&:hover{
+				color: #fff;
+				@include btn-sprite(l6422hover);
+
+			}
+		}
+		
+	}
+}
+.Hot-topic{
+	margin: 16px -20px 0 0;
+	padding-bottom: 20px;
+	_zoom: 1;
+	dt{
+		height: 28px;
+		padding-right: 20px;
+		border-bottom: 1px solid #e8e8e8;
+		font-size: 16px;
+		a{
+			float: right;
+			font-size: 14px;
+			color: #1993fb;
+			text-decoration: none;
+			&:hover{
+				color: #1682e0;
+			}
+		}
+	}
+	dd{
+		position: relative;
+		@include float(left);
+		margin: 15px 20px 0 0;
+		width: 232px;
+		_height: 123px;
+		a{
+			display: block;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.text-box{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			.bg{
+				height: 26px;
+			}
+		}
+		p{
+			position: relative;
+			z-index: 1;
+			height: 26px;
+			margin: 0;
+			line-height: 26px;
+			font-size: 12px;
+			text-align: center;
+			color: #fff;
+			@include ellipsis;
+		}
+		img{
+			vertical-align: top;
+		}
+	}
+}
+
+.tleft{
+	text-align: left;
+}
+.tcenter{
+	text-align: center;
+}
+.tright{
+	text-align: right;
+}
+

@@ -1,0 +1,124 @@
+extends ./layout/layout
+block append head
+	title 详情页
+	link(rel='stylesheet',href='css/detail.css')
+
+block content
+	div.soft_info
+		div.soft_pic
+			img(src="pic/icon72.png",width="72",height="72")
+		div.soft_detail
+			h2 
+				label 爱奇艺视频爱奇艺视频
+				span.mark.blue_d 去插件
+				span.mark.yellow_s 去插件
+				span.mark.blue_s 去插件
+				span.mark.gray_s 去插件
+			div.score
+				span.bg-star: i.full-star(style="width:90%;")
+				span.grade 9.0分
+			div.desc
+				span 最新版本：<s>4.3.1.9</s>
+				|   /  
+				span 大小：<s>33.38MB</s>
+				|   /  
+				span 发布时间：<s>2015-12-24</s>
+			ul.prop_list
+				li
+					img(src="images/ico_anti.png")
+					| 2345安全认证
+				li
+					img(src="images/ico_system.png")
+					| 适合当前系统
+				li
+					img(src="images/ico_beta.png")
+					| 测试版2
+				li
+					img(src="images/ico_pay.png")
+					| 收费版
+				li
+					img(src="images/ico_eng.png")
+					| 英文版
+				li
+					img(src="images/ico_safe.png")
+					| 绿色版
+				li
+					img(src="images/ico_foreign.png")
+					| 多国语言版
+				li
+					img(src="images/ico_extend.png")
+					| 有插件
+				li
+					img(src="images/ico_outextend.png")
+					| 去插件
+		div.download_btn
+			a(href="javascript:;",hidefocus).blueL 一键安装
+	div.bd
+		div.bd_txt
+			h2 软件介绍
+			div.intro_con
+				div.inner-box
+					p.
+						爱奇艺视频桌面版：原爱奇艺影音，是一款专注视频播放的客户端软件，爱奇艺视频桌面版具有更快、更轻、更炫、更丰富四个特点，新的桌面版带来更优质的视听感受，爱奇艺视频桌面版2013发布，品牌全面升级，新增加了桌面收藏剧集图标，预加载下一集的功能，使你追剧更加方便流畅；同时优化了开启、播放、及缓冲的速度。<br>
+						官网：<a href="http://app.qiyi.com/pc/player/">http://app.qiyi.com/pc/player/</a> 
+				a.extend.mprosE2(href="javascript:;",hidefocus) 更多
+		div.bd_txt
+			h2 更新日志
+			div.intro_con
+				div.inner-box
+					p 1、界面布局优化，扩大标签及地址栏的交互区,提升体验；主界面右侧增加“主菜单”入口。
+					p 2、地址栏增加下拉列表与转到按钮，更符合用户习惯。
+					p 3、重构鼠标手势，轨迹判定更准确，操作提示更美观。
+					p 4、界面布局优化，扩大标签及地址栏的交互区,提升体验；主界面右侧增加“主菜单”入口。
+					p 5、地址栏增加下拉列表与转到按钮，更符合用户习惯。
+					p 6、重构鼠标手势，轨迹判定更准确，操作提示更美观。
+					-for(var i=0;i<100;i++){
+						p #{i}、重构鼠标手势，轨迹判定更准确，操作提示更美观。
+					-}
+				a.extend.mprosE2(href="javascript:;",hidefocus) 更多
+	div.swiper-container
+		h2 软件截图
+		div.scrollPicBox
+			div.con
+				a(href="",target="_blank",hidefocus)
+					img(src="pic/jietu.jpg")
+			
+							
+			
+block append script
+	script.
+		$(function(){
+			var $scrollbar_wrapper=$("#scrollbar-wrapper");
+			$(".bd_txt .inner-box").each(function(){
+				if($(this).height()>72){
+					$(this).css({"height":"72px"})
+				}else{
+					$(this).parents(".bd_txt").find(".extend").hide()
+				}
+
+				setTimeout(function(){
+					$scrollbar_wrapper.tinyscrollbar();
+				},10)
+			})
+			
+			$("a.extend").on("click",function(){
+				if($(this).text()=="更多"){
+					$(this).text("收起")
+					$(this).parents(".intro_con").find(".inner-box").css({"height":"auto"})
+				}else{
+					$(this).text("更多")
+					$(this).parents(".intro_con").find(".inner-box").css({"height":"72px"})
+				}
+				$scrollbar_wrapper.tinyscrollbar();
+			})
+
+			//- 安装事件绑定
+			$(".download_btn a").on("click",function(){
+				if($(this).hasClass("grayL")) return;
+				if($(this).text()=="一键安装"){
+					$(this).addClass("grayL").removeClass("blueL").text("安装中")
+				}
+			})
+		});
+
+	

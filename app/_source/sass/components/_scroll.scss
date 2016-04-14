@@ -1,0 +1,94 @@
+html, body {
+    overflow: hidden
+}
+
+#scrollbar-wrapper {
+    margin: 0;
+    position: relative;
+    .viewport {
+        overflow: hidden;
+        position: relative
+    }
+    .overview {
+        list-style: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+    }
+    .scrollbar {
+        position: absolute;
+        background-position: 0 0;
+        right: 0;
+        top: 0;
+        z-index: 99;
+        width: 10px;
+        background: #fff;
+    }
+    // 不显示滚动条
+    .disable{
+        visibility: hidden;
+    }
+    .scroll-bg {
+        height: 100%;
+        width: 6px
+    }
+    .scroll-bg-hd {
+        height: 100%;
+        width: 6px;
+    }
+    .scroll-bg .i4, .scroll-bg .i6, .scroll-bg .i8 {
+        height: 1px;
+        width: 6px;
+    }
+    .track {
+        height: 100%;
+        width: 6px;
+        position: relative;
+        padding: 0 2px;
+    }
+    .thumb {
+        height: 20px;
+        width: 6px;
+        cursor: pointer;
+        position: absolute;
+        top: 0
+    }
+    .thumb-hd, .thumb-ft {
+        width: 100%;
+        height: 3px
+    }
+    .thumb-bd {
+        background-color: #d9d9d9;
+        height: 100%
+    }
+    .thumb .i8, .thumb .i6, .thumb .i4 {
+        height: 1px;
+        overflow: hidden;
+        background-color: #d9d9d9;
+        margin: 0 auto
+    }
+    // 鼠标滑过样式
+    .thumb-bd-hover {
+        .thumb-bd{background-color: #ccc;}
+        .i4,.i6,.i8{background-color: #ccc;}
+    }
+    .i8 {
+        width: 6px
+    }
+    .i6 {
+        width: 4px
+    }
+    .i4 {
+        width: 2px
+    }
+    .noSelect {
+        user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none
+    }
+    
+}

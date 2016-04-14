@@ -1,0 +1,78 @@
+@import "compass","normalize","components/scroll";
+$browser-minimum-versions: ("ie": "6");
+// 软件信息
+html{
+	font-family: Microsoft Yahei, sans-serif;
+}
+.centerWarp{
+	width: 773px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.collectLists{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	li{
+		position: relative;
+		@include float(left);
+		width: 232px;
+		height: 156px;
+		margin: 15px 6px 5px 14px;
+		overflow: hidden;
+		.img-box{
+			overflow: hidden;
+			zoom: 1;
+		}
+		.mask{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			width: 100%;
+			height: 123px;
+			background: #fff;
+			@include opacity(0.25);
+		}
+		img{
+			vertical-align: top;
+			_visibility: visible!important;
+		}
+		p{
+			width: 232px;
+			margin: 0;
+			line-height: 35px;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		    text-overflow: ellipsis;
+			font-size: 14px;
+			color: #333;
+		}
+		a{
+			display: block;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		&.hover{
+			.mask{
+				display: block;
+			}
+			p{
+				color: #1993fb;
+			}
+		}
+	}
+	// 角标
+	.tuijianNew{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 50px;
+		height: 50px;
+		background: image-url("baoku/new-Angle.png") no-repeat;
+	}
+}

@@ -1,0 +1,36 @@
+extends ./layout/layout
+block append head
+	title 装机必备
+	link(rel='stylesheet',href='css/Wonderfulcollect.css')
+
+block content
+	div.centerWarp
+		ul.collectLists
+			-for(var i=1;i<=24;i++){
+				if i<=2
+					li
+						i.tuijianNew
+						a(href="#",hidefocus)
+							div.img-box
+								div.mask
+								img(width="232",height="123",src="./pic/baoku/titley.jpg")
+							p(title="影音必备影音必备影音必备影音必备影音必备") 影音必备影音必备影音必备影音必备影音必备
+				else
+					li
+						a(href="#",hidefocus)
+							div.img-box
+								div.mask
+								img(width="232",height="123",src="./pic/baoku/titley.jpg")
+							p(title="影音必备") 影音必备				
+			-}
+
+block append script
+	script.
+		$(function(){
+			$(".collectLists li").hover(function(){
+				$(this).addClass("hover")
+			},function(){
+				$(this).removeClass("hover")
+			})
+		})
+

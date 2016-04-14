@@ -1,0 +1,233 @@
+@import "compass","normalize","components/scroll";
+
+@import "components/sprite2";
+
+$browser-minimum-versions: ("ie": "6");
+body{
+	font-family: Microsoft Yahei, sans-serif;
+}
+.topTitle {
+    height: 36px;
+    border-bottom: 1px solid #dee1e4;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    .btn-back{
+    	@include float(left);
+    	width: 35px;
+    	height: 20px;
+    	line-height: 20px;
+    	padding-left: 17px;
+    	margin: 8px 10px 0 20px;
+    	text-decoration: none;
+    	font-size: 12px;
+    	@include sprites-sprite(back);
+    	color: #fff;
+    }
+    .title-txt{
+    	margin: 0;
+    	line-height: 36px;
+    	font-size: 14px;
+    	font-weight: normal;
+    	color: #333;
+    }
+}
+.warp{
+	
+}
+.inner-warp{
+	width: 737px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+// banner
+.top{
+	margin-top: 15px;
+}
+.banner{
+	img{
+		vertical-align: top;
+	}
+}
+.section{
+	overflow: hidden;
+}
+.section1{
+	_zoom: 1;
+	ul{
+		margin: 0;
+		margin-top: -1px;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		margin-right: -45px;
+		_zoom: 1;
+		li{
+			float: left;
+			width: 346px;
+			height: 48px;
+			margin-right: 45px;
+			padding: 16px 0;
+			border-top: 1px solid #ededed;
+		}
+		.media-icon{
+			float: left;
+			width: 48px;
+			img{
+				vertical-align: top;
+			}
+		}
+		.msg-inner{
+			position: relative;
+			float: left;
+			margin-left: 15px;
+			.star{
+				position: absolute;
+				right: 0;
+				top: 6px;
+				overflow: hidden;
+				_zoom: 1;
+			}
+			h2{
+				width: 110px;
+				margin: 0;
+				line-height: 22px;
+				font-size: 12px;
+				font-weight: normal;
+				@include ellipsis;
+				a{
+					color: #333;
+					text-decoration: none;
+					font-weight: bold;
+					&:hover{
+						color: #1993fb;
+					}
+				}
+			}
+			p{
+				width: 166px;
+				margin: 0;
+				margin-top: 2px;
+				font-size: 12px;
+				color: #999;
+				@include ellipsis;
+			}
+		}
+		.btn-box{
+			float: right;
+			width: 100px;
+			height: 32px;
+			margin-top: 8px;
+			a{
+				display: block;
+				width: 100px;
+				height: 32px;
+				line-height: 32px;
+				text-decoration: none;
+				text-align: center;				
+				@include ellipsis;
+			}
+			.btn{
+				color: #1993fb;
+				@include sprites-sprite(btn);
+				&:hover{
+					color: #fff;
+					@include sprites-sprite(btnhover);
+				}
+			}
+			.btn-error{
+				color: #1993fb;
+				@include sprites-sprite(btn);
+				&:hover{
+					color: #fff;
+					@include sprites-sprite(btnhover);
+				}
+			}
+			.btn-disabled{
+				@include sprites-sprite(btngray);
+				cursor: default;
+				color: #999;
+			}
+		}
+	}
+}
+
+.star{
+	width: 55px;
+	height: 9px;
+	@include sprites-sprite(star);
+	.inner-star{
+		_position: relative;
+		_top: 1px;
+		display: block;
+		height: 9px;
+		@include sprites-sprite(staractive);
+	}
+}
+.Hot-topic{
+	margin: 16px -20px 0 0;
+	padding-bottom: 20px;
+	_zoom: 1;
+	dt{
+		height: 28px;
+		padding-right: 20px;
+		border-bottom: 1px solid #e8e8e8;
+		font-size: 16px;
+		a{
+			float: right;
+			font-size: 14px;
+			color: #1993fb;
+			text-decoration: none;
+			&:hover{
+				color: #1682e0;
+			}
+		}
+	}
+	dd{
+		position: relative;
+		@include float(left);
+		margin: 15px 20px 0 0;
+		width: 232px;
+		_height: 123px;
+		a{
+			display: block;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.text-box{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			@at-root{
+				.bg{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: #000;
+					@include opacity(.4);
+				}
+			}
+			.bg{
+				height: 26px;
+			}
+		}
+		p{
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			height: 26px;
+			margin: 0;
+			line-height: 26px;
+			font-size: 12px;
+			text-align: center;
+			color: #fff;
+			@include ellipsis;
+		}
+		img{
+			vertical-align: top;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+extends ./layout/layout
+block append head
+	title 今日热门
+	link(rel='stylesheet',href='css/today-hot.css')
+
+block content
+	//- 顶部
+	div.top
+		div.topleft
+			ul.conList
+				li.con
+					a(href="",hidefocus,title="asfakdkajsdk"): img(src="./pic/today-hot/banner01.jpg",width="510",height="163")
+				li.con
+					a(href="",hidefocus,title="asfakdkajsdk"): img(src="./pic/today-hot/banner01.jpg",width="510",height="163")
+				li.con
+					a(href="",hidefocus,title="asfakdkajsdk"): img(src="./pic/today-hot/banner01.jpg",width="510",height="163")
+				li.con
+					a(href="",hidefocus,title="asfakdkajsdk"): img(src="./pic/today-hot/banner01.jpg",width="510",height="163")
+				li.con
+					a(href="",hidefocus,title="asfakdkajsdk"): img(src="./pic/today-hot/banner01.jpg",width="510",height="163")
+			div.subWarp
+				div.bg
+				div.tab.tabList
+					span.selected: i
+					span: i
+					span: i
+					span: i
+					span: i
+			div.inforList
+				div(style="display:block")
+					a.lefttext(href="#",hidefocus) 我是文本我是文本1
+					a.right.btn-error.dd-png(href="javascript:;",hidefocus) 一键安装
+				div
+					a.lefttext(href="#",hidefocus) 我是文本我是文本2
+					a.right.btn.dd-png(href="javascript:;",hidefocus) 一键安装
+				div
+					a.lefttext(href="#",hidefocus) 我是文本我是文本3
+					a.right.btn.dd-png(href="javascript:;",hidefocus) 一键安装
+				div
+					a.lefttext(href="#",hidefocus) 我是文本我是文本
+					a.right.btn.dd-png(href="javascript:;",hidefocus) 一键安装
+				div
+					a.lefttext(href="#",hidefocus) 我是文本我是文本
+					a.right.btn-disabled.dd-png(href="javascript:;",hidefocus) 一键安装
+		div.topright
+			div.title-tab
+				span.active(href="javascript:;") 今日开服
+				span(href="javascript:;") 本周最热
+			div.content-tab
+				-for(var ii=1;ii<=2;ii++){
+					table.inner-content(style="display:#{ii==1? 'table':'none'}")
+						-for(var i=1; i<=5; i++){
+							tr
+								td
+									a.title-item(href="#",title="传奇霸业",hidefocus)
+										img(width="16",height="16",src="./pic/today-hot/icon1616.jpg")
+										| 传奇霸业
+								td
+									div.content-item 6390服服服服服
+								td.tright
+									div: a.btn.dd-png(href="javascript:;",hidefocus) 进入
+						-}
+				-}
+	//- 中间内容
+	div.section.section1
+		dl.Hot-recommended
+			dt
+				div.active.first: span 小编推荐
+				div: span 上网必备
+				div: span 游戏必备
+				div: span 网购必备
+				div: span Win10专区
+			-for(var ii=1;ii<=5;ii++){
+				dd.items(style="display:#{ii==1? 'block':'none'}")
+					-for(var i=1; i<=12;i++){
+						div.item
+							a.icon(href="#",title="有道云笔记",hidefocus): img(width="48",height="48",src="./pic/today-hot/icon4848.png")
+							div.title-app: a(href="#",title="有道云笔记") 有道云笔记有道云笔记
+							div.box-btn: a.btn.btn-disabled.btn-error.dd-png(href="javascript:;",hidefocus) 升级
+					-}
+			-}
+		dl.Download-ranking
+			dt 下载排行
+			-for(var i=1;i<=5;i++){
+				dd
+					if i==1
+						span.number.one= i
+					else if i==2
+						span.number.second= i
+					else if i==3
+						span.number.three= i
+					else
+						span.number= i
+					a.linkicon(href="#",title="QQ轻聊版",hidefocus): img(width="32",height="32",src="./pic/today-hot/icon3232.png")
+					a.linkfor(href="#",title="QQ轻聊版",hidefocus) QQ轻聊版
+					a.allbg.btn.dd-png(href="#",hidefocus) 安装
+			-}
+	dl.section.Hot-topic
+		dt
+			a(href="#",hidefocus) 更多专题 >>
+			| 热门专题
+		-for(var i=1;i<=3;i++){
+			dd
+				a(href="#",title="12款软件让你秒变学霸",hidefocus)
+					img(width="232",height="123",src="./pic/today-hot/topic.jpg")
+					div.text-box
+						p 12款软件让你秒变学霸
+						div.bg
+		-}
+
+block append script
+	<script src="js/slideFocus.js"></script>
+	script.
+			//banner轮播
+			var inforList = $(".inforList div");
+			var aa=$(".topleft").slideFocusPlugin({
+				animateStyle:["left"],
+			    tabNum:true,
+			    tabTagName:"span",
+			    animateTime: 250,
+			    delayTime:0,
+			    selectClass:"selected",
+			    stepNum:510,
+			    callbackFunBefore:function(next,prev){
+				    inforList.eq(next).show();
+				    inforList.eq(prev).hide();
+			   }	  
+			});
+
+			//topright
+			$(".title-tab span").on("mouseenter",function(){
+				$(this).addClass("active").siblings().removeClass("active");
+				var s=$(this).index();
+				$(".inner-content").eq(s).show().siblings().hide();
+			});
+
+			//小编推荐tab切换效果
+			$(".Hot-recommended dt div").on("mouseenter",function(){
+				$(this).addClass("active").siblings().removeClass("active");
+				var s=$(this).index();
+				$(".Hot-recommended dd").eq(s).show().siblings("dd").hide();
+			});

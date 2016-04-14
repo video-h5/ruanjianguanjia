@@ -1,0 +1,210 @@
+@import "compass","normalize","components/scroll";
+$browser-minimum-versions: ("ie": "6");
+// 软件信息
+body{
+	font-family: Microsoft Yahei, sans-serif;
+}
+
+.soft_info{
+	position: relative;
+	padding-bottom: 23px;
+	border-bottom: 1px solid #f2f2f2;
+	.soft_pic{
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		width: 72px;
+		height: 72px;
+		text-align: center;
+	}
+}
+.soft_detail{
+	padding: 23px 0 0 110px;
+	h2{
+		margin: 0;
+		margin-bottom: 6px;
+		margin-right: 208px;
+		margin-top: -4px;
+		font-size: 22px;
+		font-weight: normal;
+		color: #333;
+		label{
+			margin-right: 6px;
+			display: inline-block;
+			max-width:460px;
+			min-width:1px;
+			_width:expression(this.scrollWidth > 460 ? "460px" : (this.scrollWidth < 1? "1px" : "auto"));
+			vertical-align: middle;
+			@include ellipsis;
+		}
+		@at-root{
+			.mark{
+				display: inline-block;
+				margin-right: 5px;
+				padding: 0 4px;
+				height: 20px;
+				height: 21px\9;
+				line-height: 20px;
+				// *line-height: 18px;
+				vertical-align: middle;
+				color: #fff;
+				font-size: 14px;
+				cursor:default;
+				&.blue_d{
+					background: #7db5e6;
+				}
+				&.yellow_s{
+					background: #b4ac59;
+				}
+				&.blue_s{
+					background: #6f89c4;
+				}
+				&.gray_s{
+					background: #8b9baa;
+				}
+			}
+		}
+	}
+	.score{
+		margin-bottom: 12px;
+		span{
+			display: inline-block;
+			overflow: hidden;
+			vertical-align: middle;
+		}
+		.bg-star{
+			width: 90px;
+			height: 15px;
+			margin-right: 10px;
+			background: image-url("star.png") no-repeat;
+			background-position: 0 -16px;
+		}
+		.full-star{
+			display: block;
+			height: 15px;
+			background: image-url("star.png") no-repeat;
+		}
+		.grade{
+			font-size: 14px;
+			color: #333;
+		}
+	}
+	.desc{
+		margin-bottom: 12px;
+		line-height: 12px;
+		font-size: 12px;
+		color: #999;
+		s{
+			color: #333;
+			text-decoration: none;
+		}
+	}
+	.prop_list{
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		li{
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 5px;
+			list-style-type: none;
+			font-size: 12px;
+			color: #333;
+			img{
+				margin-right: 5px;
+				vertical-align: top;
+			}
+		}
+	}
+}
+// 下载安装按钮
+.download_btn{
+	position: absolute;
+	top: 40px;
+	right: 35px;
+	width: 144px;
+	height: 42px;
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 42px;
+		text-align: center;
+		text-decoration: none;
+		background: image-url("d-btn.png") no-repeat;
+		&.blueL{
+			color: #1993fb;
+			background-position:0 0;
+			&:hover{ 
+				color: #FFF;
+				background-position:0 -90px;
+			}
+		}
+		&.grayL{
+			color: #999;
+			background-position:0 -45px;
+			cursor: default;
+		}
+	}
+}
+// 简介
+%h2{
+	margin: 0;
+	margin-top: 25px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+	color: #333;
+}
+.bd{
+	padding: 0 25px;
+	overflow: hidden;
+	p{
+		margin: 0;
+	}
+}
+.bd_txt{
+	h2{
+		@extend %h2;
+		margin-bottom: 6px;
+	}
+	.intro_con{
+		font-size: 12px;
+	}
+	.inner-box{
+		overflow: hidden;
+	}
+	p{
+		line-height: 24px;
+		color: #555;
+	}
+	a{
+		color: #238eeb;
+		text-decoration: none;
+		&.extend{
+			display: inline-block;
+			margin-top: 3px;
+		}
+	}
+}
+
+// 图片画廊
+.swiper-container{
+	padding: 0 25px;
+	overflow: hidden;
+	h2{
+		@extend %h2;
+	}
+	.con{
+		width: 500px;
+		height: 350px;
+		margin: 15px auto;
+		text-align:center;
+		img{ 
+			max-width:500px;
+			_width: expression(this.offsetWidth <= 10 ? "10px" : ( this.offsetWidth >= 500 ? "500px" : "auto"));
+			max-height:380px;
+			_height: expression(this.offsetHeight <= 10 ? "10px" : ( this.offsetHeight >= 380 ? "380px" : "auto"));
+		}
+	}
+}
