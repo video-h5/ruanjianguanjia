@@ -25,8 +25,8 @@
         this._name = name; //扩展的方法名
 
         var d = this,
-            v = t.find(".viewport"),
-            m = t.find(".overview"),
+            v = t.children(".viewport"),
+            m = v.children(".overview"),
             g = t.children('.scrollbar').size()>0?t.children('.scrollbar'):addScrollbar(),
             y = g.find(".track"),
             b = g.find(".thumb"),
