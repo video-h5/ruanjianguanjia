@@ -371,15 +371,15 @@ html, body {
   overflow: hidden;
 }
 
-#scrollbar-wrapper {
+.scrollbar-wrapper {
   margin: 0;
   position: relative;
 }
-#scrollbar-wrapper .viewport {
+.scrollbar-wrapper .viewport {
   overflow: hidden;
   position: relative;
 }
-#scrollbar-wrapper .overview {
+.scrollbar-wrapper .overview {
   list-style: none;
   position: absolute;
   left: 0;
@@ -387,7 +387,7 @@ html, body {
   width: 100%;
   margin: 0;
 }
-#scrollbar-wrapper .scrollbar {
+.scrollbar-wrapper .scrollbar {
   position: absolute;
   background-position: 0 0;
   right: 0;
@@ -396,64 +396,64 @@ html, body {
   width: 10px;
   background: #fff;
 }
-#scrollbar-wrapper .disable {
+.scrollbar-wrapper .disable {
   visibility: hidden;
 }
-#scrollbar-wrapper .scroll-bg {
+.scrollbar-wrapper .scroll-bg {
   height: 100%;
   width: 6px;
 }
-#scrollbar-wrapper .scroll-bg-hd {
+.scrollbar-wrapper .scroll-bg-hd {
   height: 100%;
   width: 6px;
 }
-#scrollbar-wrapper .scroll-bg .i4, #scrollbar-wrapper .scroll-bg .i6, #scrollbar-wrapper .scroll-bg .i8 {
+.scrollbar-wrapper .scroll-bg .i4, .scrollbar-wrapper .scroll-bg .i6, .scrollbar-wrapper .scroll-bg .i8 {
   height: 1px;
   width: 6px;
 }
-#scrollbar-wrapper .track {
+.scrollbar-wrapper .track {
   height: 100%;
   width: 6px;
   position: relative;
   padding: 0 2px;
 }
-#scrollbar-wrapper .thumb {
+.scrollbar-wrapper .thumb {
   height: 20px;
   width: 6px;
   cursor: pointer;
   position: absolute;
   top: 0;
 }
-#scrollbar-wrapper .thumb-hd, #scrollbar-wrapper .thumb-ft {
+.scrollbar-wrapper .thumb-hd, .scrollbar-wrapper .thumb-ft {
   width: 100%;
   height: 3px;
 }
-#scrollbar-wrapper .thumb-bd {
+.scrollbar-wrapper .thumb-bd {
   background-color: #d9d9d9;
   height: 100%;
 }
-#scrollbar-wrapper .thumb .i8, #scrollbar-wrapper .thumb .i6, #scrollbar-wrapper .thumb .i4 {
+.scrollbar-wrapper .thumb .i8, .scrollbar-wrapper .thumb .i6, .scrollbar-wrapper .thumb .i4 {
   height: 1px;
   overflow: hidden;
   background-color: #d9d9d9;
   margin: 0 auto;
 }
-#scrollbar-wrapper .thumb-bd-hover .thumb-bd {
+.scrollbar-wrapper .thumb-bd-hover .thumb-bd {
   background-color: #ccc;
 }
-#scrollbar-wrapper .thumb-bd-hover .i4, #scrollbar-wrapper .thumb-bd-hover .i6, #scrollbar-wrapper .thumb-bd-hover .i8 {
+.scrollbar-wrapper .thumb-bd-hover .i4, .scrollbar-wrapper .thumb-bd-hover .i6, .scrollbar-wrapper .thumb-bd-hover .i8 {
   background-color: #ccc;
 }
-#scrollbar-wrapper .i8 {
+.scrollbar-wrapper .i8 {
   width: 6px;
 }
-#scrollbar-wrapper .i6 {
+.scrollbar-wrapper .i6 {
   width: 4px;
 }
-#scrollbar-wrapper .i4 {
+.scrollbar-wrapper .i4 {
   width: 2px;
 }
-#scrollbar-wrapper .noSelect {
+.scrollbar-wrapper .noSelect {
   -ms-user-select: none;
       user-select: none;
   -o-user-select: none;

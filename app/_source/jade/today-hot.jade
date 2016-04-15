@@ -111,32 +111,42 @@ block content
 block append script
 	<script src="js/slideFocus.js"></script>
 	script.
-			//banner轮播
-			var inforList = $(".inforList div");
-			var aa=$(".topleft").slideFocusPlugin({
-				animateStyle:["left"],
-			    tabNum:true,
-			    tabTagName:"span",
-			    animateTime: 250,
-			    delayTime:0,
-			    selectClass:"selected",
-			    stepNum:510,
-			    callbackFunBefore:function(next,prev){
-				    inforList.eq(next).show();
-				    inforList.eq(prev).hide();
-			   }	  
+		$(function(){
+			function resize() {
+			    $(".scrollbar-wrapper").tinyscrollbar();
+			    // console.log(1);
+			}
+			resize();
+			$(window).on("resize", function() {
+			    resize()
 			});
+		});
+		//banner轮播
+		var inforList = $(".inforList div");
+		var aa=$(".topleft").slideFocusPlugin({
+			animateStyle:["left"],
+		    tabNum:true,
+		    tabTagName:"span",
+		    animateTime: 250,
+		    delayTime:0,
+		    selectClass:"selected",
+		    stepNum:510,
+		    callbackFunBefore:function(next,prev){
+			    inforList.eq(next).show();
+			    inforList.eq(prev).hide();
+		   }	  
+		});
 
-			//topright
-			$(".title-tab span").on("mouseenter",function(){
-				$(this).addClass("active").siblings().removeClass("active");
-				var s=$(this).index();
-				$(".inner-content").eq(s).show().siblings().hide();
-			});
+		//topright
+		$(".title-tab span").on("mouseenter",function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			var s=$(this).index();
+			$(".inner-content").eq(s).show().siblings().hide();
+		});
 
-			//小编推荐tab切换效果
-			$(".Hot-recommended dt div").on("mouseenter",function(){
-				$(this).addClass("active").siblings().removeClass("active");
-				var s=$(this).index();
-				$(".Hot-recommended dd").eq(s).show().siblings("dd").hide();
-			});
+		//小编推荐tab切换效果
+		$(".Hot-recommended dt div").on("mouseenter",function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			var s=$(this).index();
+			$(".Hot-recommended dd").eq(s).show().siblings("dd").hide();
+		});

@@ -88,7 +88,16 @@ block content
 block append script
 	script.
 		$(function(){
-			var $scrollbar_wrapper=$("#scrollbar-wrapper");
+			function resize() {
+			    $(".scrollbar-wrapper").tinyscrollbar();
+			    // console.log(1);
+			}
+			resize();
+			$(window).on("resize", function() {
+			    resize()
+			});
+			
+			var $scrollbar_wrapper=$(".scrollbar-wrapper");
 			$(".bd_txt .inner-box").each(function(){
 				if($(this).height()>72){
 					$(this).css({"height":"72px"})

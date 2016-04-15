@@ -9,24 +9,7 @@
   <link rel="stylesheet" href="css/zhuanti-details.css">
 </head>
 <body>
-  <div id="scrollbar-wrapper">
-    <div class="scrollbar">
-      <div class="track">
-        <div id="thumb" class="thumb">
-          <div class="thumb-hd">
-            <div class="i4"></div>
-            <div class="i6"></div>
-            <div class="i8"></div>
-          </div>
-          <div class="thumb-bd"></div>
-          <div class="thumb-ft">
-            <div class="i8"></div>
-            <div class="i6"></div>
-            <div class="i4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="scrollbar-wrapper">
     <div class="viewport">
       <div class="overview">
         <div class="warp">
@@ -134,5 +117,16 @@
   <![endif]-->
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/scroll.js"></script>
-  <script src="js/slideFocus.js"></script>
+  <script>
+    $(function(){
+    	function resize() {
+    	    $(".scrollbar-wrapper").tinyscrollbar();
+    	    // console.log(1);
+    	}
+    	resize();
+    	$(window).on("resize", function() {
+    	    resize()
+    	});
+    });
+  </script>
 </body></html>

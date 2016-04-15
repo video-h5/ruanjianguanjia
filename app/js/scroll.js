@@ -27,7 +27,7 @@
         var d = this,
             v = t.find(".viewport"),
             m = t.find(".overview"),
-            g = t.find(".scrollbar"),
+            g = t.children('.scrollbar').size()>0?t.children('.scrollbar'):addScrollbar(),
             y = g.find(".track"),
             b = g.find(".thumb"),
             bd = g.find(".thumb-bd"),
@@ -38,6 +38,28 @@
             x = S ? "width" : "height",
             T = S ? "left" : "top",
             N = 0;
+        // 添加滚动条
+        function addScrollbar(){
+            var html='<div class="scrollbar">'
+                    +'<div class="track">'
+                    +'<div class="thumb">'
+                    +'<div class="thumb-hd">'
+                    +'<div class="i4"></div>'
+                    +'<div class="i6"></div>'
+                    +'<div class="i8"></div>'
+                    +'</div>'
+                    +'<div class="thumb-bd"></div>'
+                    +'<div class="thumb-ft">'
+                    +'<div class="i8"></div>'
+                    +'<div class="i6"></div>'
+                    +'<div class="i4"></div>'
+                    +'</div>'
+                    +'</div>'
+                    +'</div>'
+                    +'</div>';
+            t.prepend(html);
+            return t.find(".scrollbar")
+        }
         this.contentPosition = 0;
         this.viewportSize = 0;
         this.contentSize = 0;
@@ -50,7 +72,7 @@
         this.update = function(e) {
             var $w = $(window).width(),
                 $h = $(window).height();
-            var aaa=t.height();
+            var aaa = t.height();
             // console.log(aaa);
             t.css({
                 width: $w + "px"
@@ -198,36 +220,25 @@
         }
         // 禁止拖动滑块的时候选择文本
         function scrollxz() {
-            var thumb = document.getElementById('thumb');
-            thumb.onmousedown = function(ev) {
-                var oEvent = ev || event;
-                if (thumb.setCapture) {
-                    thumb.onmouseup = mouseup;
-                    thumb.setCapture(); //事件捕获
+            $('.thumb').each(function(index, el) {
+                this.onmousedown = function(ev) {
+                    var oEvent = ev || event;
+                    if (this.setCapture) {
+                        this.onmouseup = mouseup;
+                        this.setCapture(); //事件捕获
+                    }
+                    return false;
                 }
-                return false;
-            }
-
-            function mouseup() {
-                this.onmousemove = null;
-                this.onmouseup = null;
-                if (thumb.releaseCapture) {
-                    thumb.releaseCapture(); //释放事件捕捉
+                function mouseup() {
+                    this.onmousemove = null;
+                    this.onmouseup = null;
+                    if (this.releaseCapture) {
+                        this.releaseCapture(); //释放事件捕捉
+                    }
                 }
-            }
+            });
         }
 
     }
 
 });
-
-$(function() {
-    function resize() {
-        $("#scrollbar-wrapper").tinyscrollbar();
-        // console.log(1);
-    }
-    resize();
-    $(window).on("resize", function() {
-        resize()
-    })
-})

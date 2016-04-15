@@ -27,6 +27,15 @@ block content
 block append script
 	script.
 		$(function(){
+			function resize() {
+			    $(".scrollbar-wrapper").tinyscrollbar();
+			    // console.log(1);
+			}
+			resize();
+			$(window).on("resize", function() {
+			    resize()
+			});
+
 			$(".collectLists li").hover(function(){
 				$(this).addClass("hover")
 			},function(){

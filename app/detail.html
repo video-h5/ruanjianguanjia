@@ -9,24 +9,7 @@
   <link rel="stylesheet" href="css/detail.css">
 </head>
 <body>
-  <div id="scrollbar-wrapper">
-    <div class="scrollbar">
-      <div class="track">
-        <div id="thumb" class="thumb">
-          <div class="thumb-hd">
-            <div class="i4"></div>
-            <div class="i6"></div>
-            <div class="i8"></div>
-          </div>
-          <div class="thumb-bd"></div>
-          <div class="thumb-ft">
-            <div class="i8"></div>
-            <div class="i6"></div>
-            <div class="i4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="scrollbar-wrapper">
     <div class="viewport">
       <div class="overview">
         <div class="warp">
@@ -196,7 +179,16 @@
   <script src="js/scroll.js"></script>
   <script>
     $(function(){
-    	var $scrollbar_wrapper=$("#scrollbar-wrapper");
+    	function resize() {
+    	    $(".scrollbar-wrapper").tinyscrollbar();
+    	    // console.log(1);
+    	}
+    	resize();
+    	$(window).on("resize", function() {
+    	    resize()
+    	});
+    	
+    	var $scrollbar_wrapper=$(".scrollbar-wrapper");
     	$(".bd_txt .inner-box").each(function(){
     		if($(this).height()>72){
     			$(this).css({"height":"72px"})
