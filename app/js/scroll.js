@@ -25,13 +25,13 @@
         this._name = name; //扩展的方法名
 
         var d = this,
-            v = t.find(".viewport"),
-            m = t.find(".overview"),
-            g = t.find(".scrollbar"),
-            y = g.find(".track"),
-            b = g.find(".thumb"),
-            bd = g.find(".thumb-bd"),
-            hd = g.find(".thumb-hd"),
+            v = t.find(".viewport:eq(0)"),
+            m = t.find(".overview:eq(0)"),
+            g = t.find(".scrollbar:eq(0)"),
+            y = g.find(".track:eq(0)"),
+            b = g.find(".thumb:eq(0)"),
+            bd = g.find(".thumb-bd:eq(0)"),
+            hd = g.find(".thumb-hd:eq(0)"),
             w = "ontouchstart" in document.documentElement,
             E = "onwheel" in document.createElement("div") ? "wheel" : document.onmousewheel !== undefined ? "mousewheel" : "DOMMouseScroll",
             S = this.options.axis === "x",
@@ -48,14 +48,20 @@
         this.thumbPosition = 0;
         this.hasContentToSroll = !1;
         this.update = function(e) {
-            var $w = $(window).width(),
-                $h = $(window).height();
-            var aaa=t.height();
-            // console.log(aaa);
+			t.removeAttr("style");
+			v.removeAttr("style");
+			var $w = t.outerWidth(),
+					$h = t.outerHeight();
+			if($h==0){
+				$w = $(window).outerWidth(),
+				$h = $(window).outerHeight();
+			}
+            
             t.css({
                 width: $w + "px"
             });
             v.css({
+				width: $w-10 + "px",
                 height: $h + "px"
             });
             var tt = x.charAt(0).toUpperCase() + x.slice(1).toLowerCase();
@@ -127,12 +133,25 @@
             });
             // 监听滚轮事件
             if (d.options.wheel && window.addEventListener) {
-                t.off("mousewheel");
-                t.on("mousewheel", function() {
-                    c()
-                });
+				t.bind("mouseover",function(e){
+					e.stopPropagation();
+					t.off("mousewheel");
+					t.on("mousewheel", function(){
+						c()
+					});
+				})
+				t.bind("mouseout",function(){
+					 t.off("mousewheel");
+				})
+                
             } else {
-                d.options.wheel && (t[0].onmousewheel = c)
+                t.bind("mouseover",function(e){
+					e.stopPropagation();
+					d.options.wheel && (t[0].onmousewheel = c)
+				})
+				t.bind("mouseout",function(){
+					 d.options.wheel && (t[0].onmousewheel = null)
+				})
             }
         }
         // 只适用于手机设备上的事件
@@ -220,14 +239,34 @@
     }
 
 });
+(function($,h,c){var a=$([]),e=$.resize=$.extend($.resize,{}),i,k="setTimeout",j="resize",d=j+"-special-event",b="delay",f="throttleWindow";e[b]=250;e[f]=true;$.event.special[j]={setup:function(){if(!e[f]&&this[k]){return false}var l=$(this);a=a.add(l);$.data(this,d,{w:l.width(),h:l.height()});if(a.length===1){g()}},teardown:function(){if(!e[f]&&this[k]){return false}var l=$(this);a=a.not(l);l.removeData(d);if(!a.length){clearTimeout(i)}},add:function(l){if(!e[f]&&this[k]){return false}var n;function m(s,o,p){var q=$(this),r=$.data(this,d);r.w=o!==c?o:q.width();r.h=p!==c?p:q.height();n.apply(this,arguments)}if($.isFunction(l)){n=l;return m}else{n=l.handler;l.handler=m}}};function g(){i=h[k](function(){a.each(function(){var n=$(this),m=n.width(),l=n.height(),o=$.data(this,d);if(m!==o.w||l!==o.h){n.trigger(j,[o.w=m,o.h=l])}});g()},e[b])}})(jQuery,this);
+
+
 
 $(function() {
     function resize() {
-        $("#scrollbar-wrapper").tinyscrollbar();
+		$(".scrollbar-wrapper").each(function(){
+			$(this).tinyscrollbar();
+			
+		})
+        
         // console.log(1);
     }
     resize();
-    $(window).on("resize", function() {
+    $(window).resize(function() {
         resize()
     })
+	
+	
+	
+	$(".overview").resize(function(){
+		$(this).closest(".scrollbar-wrapper").tinyscrollbar();
+	})
+	
+	$(".asas").bind("mouseover",function(e){
+		e.stopPropagation();
+	})
 })
+
+
+
