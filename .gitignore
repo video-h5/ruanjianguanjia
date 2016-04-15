@@ -29,7 +29,6 @@ $RECYCLE.BIN/
 .LSOverride
 .sass-cache
 node_modules
-.map
 # Thumbnails
 ._*
 
@@ -47,3 +46,4 @@ node_modules
 Network Trash Folder
 Temporary Items
 .apdisk
+*.map
