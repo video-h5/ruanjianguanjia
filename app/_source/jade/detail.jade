@@ -88,16 +88,10 @@ block content
 block append script
 	script.
 		$(function(){
-			function resize() {
-			    $(".scrollbar-wrapper").tinyscrollbar();
-			    // console.log(1);
-			}
-			resize();
-			$(window).on("resize", function() {
-			    resize()
+			$("body").mCustomScrollbar({
+				theme:"dark-3"
 			});
 			
-			var $scrollbar_wrapper=$(".scrollbar-wrapper");
 			$(".bd_txt .inner-box").each(function(){
 				if($(this).height()>72){
 					$(this).css({"height":"72px"})
@@ -105,9 +99,6 @@ block append script
 					$(this).parents(".bd_txt").find(".extend").hide()
 				}
 
-				setTimeout(function(){
-					$scrollbar_wrapper.tinyscrollbar();
-				},10)
 			})
 			
 			$("a.extend").on("click",function(){
@@ -118,7 +109,6 @@ block append script
 					$(this).text("更多")
 					$(this).parents(".intro_con").find(".inner-box").css({"height":"72px"})
 				}
-				$scrollbar_wrapper.tinyscrollbar();
 			})
 
 			//- 安装事件绑定

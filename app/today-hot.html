@@ -7,446 +7,442 @@
   <meta charset="utf-8">
   <title>今日热门</title>
   <link rel="stylesheet" href="css/today-hot.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <style>
+    body,html{
+    	height:100%;
+    }
+  </style>
 </head>
 <body>
-  <div class="scrollbar-wrapper">
-    <div class="viewport">
-      <div class="overview">
-        <div class="warp">
-          <div class="top">
-            <div class="topleft">
-              <ul class="conList">
-                <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
-                <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
-                <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
-                <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
-                <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
-              </ul>
-              <div class="subWarp">
-                <div class="bg"></div>
-                <div class="tab tabList"><span class="selected"><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
-              </div>
-              <div class="inforList">
-                <div style="display:block"><a href="#" hidefocus class="lefttext">我是文本我是文本1</a><a href="javascript:;" hidefocus class="right btn-error dd-png">一键安装</a></div>
-                <div><a href="#" hidefocus class="lefttext">我是文本我是文本2</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
-                <div><a href="#" hidefocus class="lefttext">我是文本我是文本3</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
-                <div><a href="#" hidefocus class="lefttext">我是文本我是文本</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
-                <div><a href="#" hidefocus class="lefttext">我是文本我是文本</a><a href="javascript:;" hidefocus class="right btn-disabled dd-png">一键安装</a></div>
-              </div>
-            </div>
-            <div class="topright">
-              <div class="title-tab"><span href="javascript:;" class="active">今日开服</span><span href="javascript:;">本周最热</span></div>
-              <div class="content-tab">
-                <table style="display:table" class="inner-content">
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                </table>
-                <table style="display:none" class="inner-content">
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
-                    <td>
-                      <div class="content-item">6390服服服服服</div>
-                    </td>
-                    <td class="tright">
-                      <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="section section1">
-            <dl class="Hot-recommended">
-              <dt>
-                <div class="active first"><span>小编推荐</span></div>
-                <div><span>上网必备</span></div>
-                <div><span>游戏必备</span></div>
-                <div><span>网购必备</span></div>
-                <div><span>Win10专区</span></div>
-              </dt>
-              <dd style="display:block" class="items">
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-              </dd>
-              <dd style="display:none" class="items">
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-              </dd>
-              <dd style="display:none" class="items">
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-              </dd>
-              <dd style="display:none" class="items">
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-              </dd>
-              <dd style="display:none" class="items">
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-                <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
-                  <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
-                  <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
-                </div>
-              </dd>
-            </dl>
-            <dl class="Download-ranking">
-              <dt>下载排行</dt>
-              <dd><span class="number one">1</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
-              </dd>
-              <dd><span class="number second">2</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
-              </dd>
-              <dd><span class="number three">3</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
-              </dd>
-              <dd><span class="number">4</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
-              </dd>
-              <dd><span class="number">5</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
-              </dd>
-            </dl>
-          </div>
-          <dl class="section Hot-topic">
-            <dt><a href="#" hidefocus>更多专题 >></a>热门专题</dt>
-            <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
-                <div class="text-box">
-                  <p>12款软件让你秒变学霸</p>
-                  <div class="bg"></div>
-                </div></a></dd>
-            <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
-                <div class="text-box">
-                  <p>12款软件让你秒变学霸</p>
-                  <div class="bg"></div>
-                </div></a></dd>
-            <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
-                <div class="text-box">
-                  <p>12款软件让你秒变学霸</p>
-                  <div class="bg"></div>
-                </div></a></dd>
-          </dl>
+  <div class="warp">
+    <div class="top">
+      <div class="topleft">
+        <ul class="conList">
+          <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
+          <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
+          <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
+          <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
+          <li class="con"><a href="" hidefocus title="asfakdkajsdk"><img src="./pic/today-hot/banner01.jpg" width="510" height="163"></a></li>
+        </ul>
+        <div class="subWarp">
+          <div class="bg"></div>
+          <div class="tab tabList"><span class="selected"><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+        </div>
+        <div class="inforList">
+          <div style="display:block"><a href="#" hidefocus class="lefttext">我是文本我是文本1</a><a href="javascript:;" hidefocus class="right btn-error dd-png">一键安装</a></div>
+          <div><a href="#" hidefocus class="lefttext">我是文本我是文本2</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
+          <div><a href="#" hidefocus class="lefttext">我是文本我是文本3</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
+          <div><a href="#" hidefocus class="lefttext">我是文本我是文本</a><a href="javascript:;" hidefocus class="right btn dd-png">一键安装</a></div>
+          <div><a href="#" hidefocus class="lefttext">我是文本我是文本</a><a href="javascript:;" hidefocus class="right btn-disabled dd-png">一键安装</a></div>
+        </div>
+      </div>
+      <div class="topright">
+        <div class="title-tab"><span href="javascript:;" class="active">今日开服</span><span href="javascript:;">本周最热</span></div>
+        <div class="content-tab">
+          <table style="display:table" class="inner-content">
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+          </table>
+          <table style="display:none" class="inner-content">
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#" title="传奇霸业" hidefocus class="title-item"><img width="16" height="16" src="./pic/today-hot/icon1616.jpg">传奇霸业</a></td>
+              <td>
+                <div class="content-item">6390服服服服服</div>
+              </td>
+              <td class="tright">
+                <div><a href="javascript:;" hidefocus class="btn dd-png">进入</a></div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
+    <div class="section section1">
+      <dl class="Hot-recommended">
+        <dt>
+          <div class="active first"><span>小编推荐</span></div>
+          <div><span>上网必备</span></div>
+          <div><span>游戏必备</span></div>
+          <div><span>网购必备</span></div>
+          <div><span>Win10专区</span></div>
+        </dt>
+        <dd style="display:block" class="items">
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+        </dd>
+        <dd style="display:none" class="items">
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+        </dd>
+        <dd style="display:none" class="items">
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+        </dd>
+        <dd style="display:none" class="items">
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+        </dd>
+        <dd style="display:none" class="items">
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+          <div class="item"><a href="#" title="有道云笔记" hidefocus class="icon"><img width="48" height="48" src="./pic/today-hot/icon4848.png"></a>
+            <div class="title-app"><a href="#" title="有道云笔记">有道云笔记有道云笔记</a></div>
+            <div class="box-btn"><a href="javascript:;" hidefocus class="btn btn-disabled btn-error dd-png">升级</a></div>
+          </div>
+        </dd>
+      </dl>
+      <dl class="Download-ranking">
+        <dt>下载排行</dt>
+        <dd><span class="number one">1</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
+        </dd>
+        <dd><span class="number second">2</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
+        </dd>
+        <dd><span class="number three">3</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
+        </dd>
+        <dd><span class="number">4</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
+        </dd>
+        <dd><span class="number">5</span><a href="#" title="QQ轻聊版" hidefocus class="linkicon"><img width="32" height="32" src="./pic/today-hot/icon3232.png"></a><a href="#" title="QQ轻聊版" hidefocus class="linkfor">QQ轻聊版</a><a href="#" hidefocus class="allbg btn dd-png">安装</a>
+        </dd>
+      </dl>
+    </div>
+    <dl class="section Hot-topic">
+      <dt><a href="#" hidefocus>更多专题 >></a>热门专题</dt>
+      <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
+          <div class="text-box">
+            <p>12款软件让你秒变学霸</p>
+            <div class="bg"></div>
+          </div></a></dd>
+      <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
+          <div class="text-box">
+            <p>12款软件让你秒变学霸</p>
+            <div class="bg"></div>
+          </div></a></dd>
+      <dd><a href="#" title="12款软件让你秒变学霸" hidefocus><img width="232" height="123" src="./pic/today-hot/topic.jpg">
+          <div class="text-box">
+            <p>12款软件让你秒变学霸</p>
+            <div class="bg"></div>
+          </div></a></dd>
+    </dl>
   </div>
   <!--[if IE 6]>
   <script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
   <script>DD_belatedPNG.fix('img,i,span,.dd-png');</script>
   <![endif]-->
-  <script src="js/jquery-1.8.3.min.js"></script>
-  <script src="js/scroll.js"></script>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/slideFocus.js"></script>
   <script>
     $(function(){
-    	function resize() {
-    	    $(".scrollbar-wrapper").tinyscrollbar();
-    	    // console.log(1);
-    	}
-    	resize();
-    	$(window).on("resize", function() {
-    	    resize()
+    	$("body").mCustomScrollbar({
+    		theme:"dark-3"
     	});
+    	
     });
     //banner轮播
     var inforList = $(".inforList div");

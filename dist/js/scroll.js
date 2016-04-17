@@ -1,2 +1,244 @@
-/*! 项目名称：weather 版本：3.0.0 */
-!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a(require("jquery")):a(jQuery)}(function(a){"use strict";function b(b,d){function e(){var a='<div class="scrollbar"><div class="track"><div class="thumb"><div class="thumb-hd"><div class="i4"></div><div class="i6"></div><div class="i8"></div></div><div class="thumb-bd"></div><div class="thumb-ft"><div class="i8"></div><div class="i6"></div><div class="i4"></div></div></div></div></div>';return b.prepend(a),b.find(".scrollbar")}function f(){p.update(),h()}function g(){u.css(A,p.thumbPosition),r.css(A,-p.contentPosition),s.css(z,p.trackSize),t.css(z,p.trackSize),u.css(z,p.thumbSize),v.css(z,u.height()-2*w.height()+"px")}function h(){x?q[0].ontouchstart=function(a){1===a.touches.length&&(a.stopPropagation(),k(a.touches[0]))}:(u.bind("mousedown",function(a){a.stopPropagation(),k(a)}),t.bind("mousedown",function(a){k(a,!0)}),u.bind("mouseover",function(){a(this).addClass("thumb-bd-hover")}),u.bind("mouseleave",function(){a(this).removeClass("thumb-bd-hover")}),o()),a(window).resize(function(){p.update("relative")}),p.options.wheel&&window.addEventListener?(b.off("mousewheel"),b.on("mousewheel",function(){l()})):p.options.wheel&&(b[0].onmousewheel=l)}function i(){return p.contentPosition>0}function j(){return p.contentPosition<=p.contentSize-p.viewportSize-5}function k(b,c){p.hasContentToSroll&&(a("body").addClass("noSelect"),B=c?u.offset()[A]:y?b.pageX:b.pageY,x?(document.ontouchmove=function(a){(p.options.touchLock||i()&&j())&&a.preventDefault(),m(a.touches[0])},document.ontouchend=n):(a(document).bind("mousemove",m),a(document).bind("mouseup",n),u.bind("mouseup",n),t.bind("mouseup",n)),m(b))}function l(c){if(p.hasContentToSroll){var d=c||window.event,e=-(d.deltaY||d.detail||-1/3*d.wheelDelta)/40,f=1===d.deltaMode?p.options.wheelSpeed:1;p.contentPosition-=e*f*p.options.wheelSpeed,p.contentPosition=Math.min(p.contentSize-p.viewportSize,Math.max(0,p.contentPosition)),p.thumbPosition=p.contentPosition/p.trackRatio,b.trigger("move"),u.css(A,p.thumbPosition),r.css(A,-p.contentPosition),(p.options.wheelLock||i()&&j())&&(d=a.event.fix(d),d.preventDefault())}}function m(a){if(p.hasContentToSroll){var c=y?a.pageX:a.pageY,d=x?B-c:c-B,e=Math.min(p.trackSize-p.thumbSize,Math.max(0,p.thumbPosition+d));p.contentPosition=e*p.trackRatio,b.trigger("move"),u.css(A,e),r.css(A,-p.contentPosition)}}function n(){p.thumbPosition=parseInt(u.css(A),10)||0,a("body").removeClass("noSelect"),a(document).unbind("mousemove",m),a(document).unbind("mouseup",n),u.unbind("mouseup",n),t.unbind("mouseup",n),document.ontouchmove=document.ontouchend=null}function o(){a(".thumb").each(function(a,b){function c(){this.onmousemove=null,this.onmouseup=null,this.releaseCapture&&this.releaseCapture()}this.onmousedown=function(a){a||event;return this.setCapture&&(this.onmouseup=c,this.setCapture()),!1}})}this._default={axis:"y",wheel:!0,wheelSpeed:40,wheelLock:!0,touchLock:!0,trackSize:!1,thumbSize:!1,thumbSizeMin:20},this.options=a.extend({},this._default,d),this._name=c;var p=this,q=b.children(".viewport"),r=q.children(".overview"),s=b.children(".scrollbar").size()>0?b.children(".scrollbar"):e(),t=s.find(".track"),u=s.find(".thumb"),v=s.find(".thumb-bd"),w=s.find(".thumb-hd"),x="ontouchstart"in document.documentElement,y=("onwheel"in document.createElement("div")?"wheel":void 0!==document.onmousewheel?"mousewheel":"DOMMouseScroll","x"===this.options.axis),z=y?"width":"height",A=y?"left":"top",B=0;this.contentPosition=0,this.viewportSize=0,this.contentSize=0,this.contentRatio=0,this.trackSize=0,this.trackRatio=0,this.thumbSize=0,this.thumbPosition=0,this.hasContentToSroll=!1,this.update=function(c){var d=a(window).width(),e=a(window).height();b.height();b.css({width:d+"px"}),q.css({height:e+"px"});var f=z.charAt(0).toUpperCase()+z.slice(1).toLowerCase();switch(this.viewportSize=q[0]["offset"+f],this.contentSize=r[0]["scroll"+f],this.contentRatio=this.viewportSize/this.contentSize,this.trackSize=this.options.trackSize||this.viewportSize,this.thumbSize=Math.min(this.trackSize,Math.max(this.options.thumbSizeMin,this.options.thumbSize||this.trackSize*this.contentRatio)),this.trackRatio=(this.contentSize-this.viewportSize)/(this.trackSize-this.thumbSize),this.hasContentToSroll=this.contentRatio<1,s.toggleClass("disable",!this.hasContentToSroll),c){case"bottom":this.contentPosition=Math.max(this.contentSize-this.viewportSize,0);break;case"relative":this.contentPosition=Math.min(Math.max(this.contentSize-this.viewportSize,0),Math.max(0,this.contentPosition));break;default:this.contentPosition=Math.min(this.contentSize-this.viewportSize<0?0:this.contentSize-this.viewportSize,Math.max(0,Math.abs(parseInt(r.css("top")))))}this.thumbPosition=this.contentPosition/this.trackRatio,g()},f()}var c="tinyscrollbar";a.fn[c]=function(d){return this.each(function(){a.data(this,"plugin_"+c)||a.data(this,"pluginame_"+c,new b(a(this),d))})}});
+(function(e) {
+    typeof define == "function" && define.amd ? define(["jquery"], e) : typeof exports == "object" ? module.exports = e(require("jquery")) : e(jQuery)
+})(function($) {
+    "use strict";
+    var name = "tinyscrollbar";
+    $.fn[name] = function(r) {
+        return this.each(function() {
+            $.data(this, "plugin_" + name) || $.data(this, "pluginame_" + name, new t($(this), r))
+        })
+    }
+
+    function t(t, i) {
+        this._default = {
+            axis: "y",
+            wheel: !0,
+            wheelSpeed: 40,
+            wheelLock: !0,
+            touchLock: !0,
+            trackSize: !1,
+            thumbSize: !1,
+            thumbSizeMin: 20
+        };
+
+        this.options = $.extend({}, this._default, i);
+        this._name = name; //扩展的方法名
+
+        var d = this,
+            v = t.children(".viewport"),
+            m = v.children(".overview"),
+            g = t.children('.scrollbar').size()>0?t.children('.scrollbar'):addScrollbar(),
+            y = g.find(".track"),
+            b = g.find(".thumb"),
+            bd = g.find(".thumb-bd"),
+            hd = g.find(".thumb-hd"),
+            w = "ontouchstart" in document.documentElement,
+            E = "onwheel" in document.createElement("div") ? "wheel" : document.onmousewheel !== undefined ? "mousewheel" : "DOMMouseScroll",
+            S = this.options.axis === "x",
+            x = S ? "width" : "height",
+            T = S ? "left" : "top",
+            N = 0;
+        // 添加滚动条
+        function addScrollbar(){
+            var html='<div class="scrollbar">'
+                    +'<div class="track">'
+                    +'<div class="thumb">'
+                    +'<div class="thumb-hd">'
+                    +'<div class="i4"></div>'
+                    +'<div class="i6"></div>'
+                    +'<div class="i8"></div>'
+                    +'</div>'
+                    +'<div class="thumb-bd"></div>'
+                    +'<div class="thumb-ft">'
+                    +'<div class="i8"></div>'
+                    +'<div class="i6"></div>'
+                    +'<div class="i4"></div>'
+                    +'</div>'
+                    +'</div>'
+                    +'</div>'
+                    +'</div>';
+            t.prepend(html);
+            return t.find(".scrollbar")
+        }
+        this.contentPosition = 0;
+        this.viewportSize = 0;
+        this.contentSize = 0;
+        this.contentRatio = 0;
+        this.trackSize = 0;
+        this.trackRatio = 0;
+        this.thumbSize = 0;
+        this.thumbPosition = 0;
+        this.hasContentToSroll = !1;
+        this.update = function(e) {
+            var $w = $(window).width(),
+                $h = $(window).height();
+            var aaa = t.height();
+            // console.log(aaa);
+            t.css({
+                width: $w + "px"
+            });
+            v.css({
+                height: $h + "px"
+            });
+            var tt = x.charAt(0).toUpperCase() + x.slice(1).toLowerCase();
+            this.viewportSize = v[0]["offset" + tt];
+            this.contentSize = m[0]["scroll" + tt];
+            this.contentRatio = this.viewportSize / this.contentSize;
+            this.trackSize = this.options.trackSize || this.viewportSize;
+            this.thumbSize = Math.min(this.trackSize, Math.max(this.options.thumbSizeMin, this.options.thumbSize || this.trackSize * this.contentRatio));
+            this.trackRatio = (this.contentSize - this.viewportSize) / (this.trackSize - this.thumbSize);
+            this.hasContentToSroll = this.contentRatio < 1;
+            g.toggleClass("disable", !this.hasContentToSroll);
+            switch (e) {
+                case "bottom":
+                    this.contentPosition = Math.max(this.contentSize - this.viewportSize, 0);
+                    break;
+                case "relative":
+                    this.contentPosition = Math.min(Math.max(this.contentSize - this.viewportSize, 0), Math.max(0, this.contentPosition));
+                    break;
+                default:
+                    // this.contentPosition = parseInt(e, 10) || 0
+                    this.contentPosition = Math.min(this.contentSize - this.viewportSize < 0 ? 0 : this.contentSize - this.viewportSize, Math.max(0, Math.abs(parseInt(m.css("top")))));
+            }
+            this.thumbPosition = this.contentPosition / this.trackRatio;
+            o() //设置css样式
+        };
+        init();
+
+
+        // 初始化函数 
+        function init() {
+            d.update(); //参数
+            u(); //事件绑定 
+        }
+        //设置css样式
+        function o() {
+            b.css(T, d.thumbPosition);
+
+            m.css(T, -d.contentPosition);
+            g.css(x, d.trackSize);
+            y.css(x, d.trackSize);
+            b.css(x, d.thumbSize);
+            bd.css(x, b.height() - 2 * hd.height() + "px");
+        }
+        // 事件绑定函数
+        function u() {
+            if (w) { //通过touch事件判断设备，如果是手机执行下面
+                v[0].ontouchstart = function(e) {
+                    1 === e.touches.length && (e.stopPropagation(), l(e.touches[0]))
+                }
+            } else {
+                b.bind("mousedown", function(e) { //滑块绑定鼠标事件
+                    e.stopPropagation();
+                    l(e)
+                });
+                y.bind("mousedown", function(e) {
+                    l(e, !0)
+                });
+                b.bind("mouseover", function() {
+                    $(this).addClass("thumb-bd-hover")
+                });
+                b.bind("mouseleave", function() {
+                    $(this).removeClass("thumb-bd-hover")
+                });
+                scrollxz(); //禁止选择文本
+            }
+            // 监听窗体size事件
+            $(window).resize(function() {
+                d.update("relative");
+            });
+            // 监听滚轮事件
+            if (d.options.wheel && window.addEventListener) {
+                t.off("mousewheel");
+                t.on("mousewheel", function() {
+                    c()
+                });
+            } else {
+                d.options.wheel && (t[0].onmousewheel = c)
+            }
+        }
+        // 只适用于手机设备上的事件
+        function a() {
+            return d.contentPosition > 0
+        }
+
+        function f() {
+            return d.contentPosition <= d.contentSize - d.viewportSize - 5
+        }
+
+        // 滑块事件
+        function l(t, n) {
+            if (d.hasContentToSroll) {
+                $("body").addClass("noSelect");
+                N = n ? b.offset()[T] : S ? t.pageX : t.pageY;
+                if (w) { //通过touch判断设备
+                    document.ontouchmove = function(e) {
+                        (d.options.touchLock || a() && f()) && e.preventDefault(), h(e.touches[0])
+                    };
+                    document.ontouchend = p
+                } else {
+                    $(document).bind("mousemove", h);
+                    $(document).bind("mouseup", p);
+                    b.bind("mouseup", p);
+                    y.bind("mouseup", p)
+                }
+                h(t)
+            }
+        }
+
+        // 滚轮事件
+        function c(n) {
+            if (d.hasContentToSroll) {
+                var r = n || window.event,
+                    i = -(r.deltaY || r.detail || -1 / 3 * r.wheelDelta) / 40,
+                    s = r.deltaMode === 1 ? d.options.wheelSpeed : 1;
+                d.contentPosition -= i * s * d.options.wheelSpeed;
+                d.contentPosition = Math.min(d.contentSize - d.viewportSize, Math.max(0, d.contentPosition));
+                d.thumbPosition = d.contentPosition / d.trackRatio, t.trigger("move");
+                b.css(T, d.thumbPosition);
+                m.css(T, -d.contentPosition);
+                // console.log(d.contentSize);
+                if (d.options.wheelLock || a() && f()) r = $.event.fix(r), r.preventDefault()
+            }
+        }
+
+        // 滑块拖动事件
+        function h(e) {
+            if (d.hasContentToSroll) {
+                var n = S ? e.pageX : e.pageY,
+                    r = w ? N - n : n - N,
+                    i = Math.min(d.trackSize - d.thumbSize, Math.max(0, d.thumbPosition + r));
+                d.contentPosition = i * d.trackRatio;
+                t.trigger("move");
+                b.css(T, i);
+                m.css(T, -d.contentPosition)
+            }
+        }
+        //手机停止拖动滑块事件
+        function p() {
+            d.thumbPosition = parseInt(b.css(T), 10) || 0, $("body").removeClass("noSelect"), $(document).unbind("mousemove", h), $(document).unbind("mouseup", p), b.unbind("mouseup", p), y.unbind("mouseup", p), document.ontouchmove = document.ontouchend = null
+        }
+        // 禁止拖动滑块的时候选择文本
+        function scrollxz() {
+            $('.thumb').each(function(index, el) {
+                this.onmousedown = function(ev) {
+                    var oEvent = ev || event;
+                    if (this.setCapture) {
+                        this.onmouseup = mouseup;
+                        this.setCapture(); //事件捕获
+                    }
+                    return false;
+                }
+                function mouseup() {
+                    this.onmousemove = null;
+                    this.onmouseup = null;
+                    if (this.releaseCapture) {
+                        this.releaseCapture(); //释放事件捕捉
+                    }
+                }
+            });
+        }
+
+    }
+
+});

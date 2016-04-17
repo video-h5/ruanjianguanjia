@@ -112,14 +112,10 @@ block append script
 	<script src="js/slideFocus.js"></script>
 	script.
 		$(function(){
-			function resize() {
-			    $(".scrollbar-wrapper").tinyscrollbar();
-			    // console.log(1);
-			}
-			resize();
-			$(window).on("resize", function() {
-			    resize()
+			$("body").mCustomScrollbar({
+				theme:"dark-3"
 			});
+			
 		});
 		//banner轮播
 		var inforList = $(".inforList div");
