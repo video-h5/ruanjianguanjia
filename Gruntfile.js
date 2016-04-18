@@ -186,7 +186,7 @@ module.exports = function(grunt) {
                         '<%= config.app %>/images/{,*/}*',
                         '<%= config.app %>/**/*.js'
                     ],
-                    port: 9000,
+                    port: 8000,
                     server: {
                         baseDir: ['<%= config.app %>'],
                         index:"zhuanti-details.html"

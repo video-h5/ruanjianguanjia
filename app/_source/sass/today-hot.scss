@@ -164,6 +164,7 @@ body{
 		}
 	}
 	.inner-content{
+		position: relative;
 		width: 100%;
 		margin-top: 1px;
 		td{
@@ -329,6 +330,7 @@ body{
 }
 // 下载排行榜
 .Download-ranking{
+	position: relative;
 	float: right;
 	width: 206px;
 	margin: 0;
