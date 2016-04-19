@@ -7,7 +7,7 @@ block content
 	div.topTitle
 		a.dd-png.btn-back(href="javascript:;",hidefocus) 返回
 		h2.title-txt 3.14恋爱养成游戏精选
-	div.warp.content-box
+	div.warp.mCustomScrollbar
 		div.inner-warp
 			//- 顶部
 			div.top
@@ -41,7 +41,7 @@ block content
 block append script
 	script.
 		$(function(){
-			$(".content-box").mCustomScrollbar({
+			$(".mCustomScrollbar").mCustomScrollbar({
 				theme:"dark-3",
 				setWidth:$(window).width(),
 				setHeight:$(window).height()-37
